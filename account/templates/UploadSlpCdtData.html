@@ -1,0 +1,46 @@
+<html>
+ <style type="text/css">
+ body{color:#efd;background:#876;padding:0 5em;margin:0}
+ h1{padding:2em 1em;background:#675}
+ h2{color:#bf8;border-top:1px dotted #fff;margin-top:2em}
+ h3{color:#bcd;margin-top:1em}
+ p{margin:1em 0}
+ </style>
+<body>
+<h1><font face="verdana"><center>Now you can upload Sleeping Condition data</center></font></h1>
+
+<div id="middle"  align="center"><textarea style="resize:none;horiz-align:center; display:table-cell; color: black" rows="15" cols="70" readonly>
+Data description: you can upload data about old people's sleeping condition here. The data consists of ?how many? columns, you can upload at most ?how many? rows.
+(In demo, you can upload MNIST)
+
+Result description: will give you some advice about the sleeping condition of old people.
+
+Available result description form: histogram, line chart [pie chart, violin plot, Hierarchical clustering plot, etc..]
+(in demo, we only show prediction results of MNIST data set in plain ascii characters)
+</textarea></div>
+
+<!--<p><font size="5" face="arial" color="red"><center>You can upload a image</center></font></p>*/-->
+
+<div class="row", style="text-align: center; /*让div内部文字居中*/">
+      <div class="col-md-8 col-md-offset-2">
+          <form class="form-inline" role="form"  method="post" enctype="multipart/form-data" accept-charset="utf-8">
+              {% csrf_token %}
+              <div class="form-group">
+                  <input type="file" name="file">
+                  <input type="submit" value="Upload Files">
+              </div>
+          </form>
+      </div>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+
+<a href="http://localhost:8000/servicelist/"><center>Back to service list</center></a>
+</body>
+</html>
+
+
+

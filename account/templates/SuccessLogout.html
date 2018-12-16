@@ -5,14 +5,17 @@
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
  <title></title>
 </head>
+<style type="text/css">
+ body{color:#efd;background:#876;padding:0 5em;margin:0}
+ h1{padding:2em 1em;background:#675}
+ h2{color:#bf8;border-top:1px dotted #fff;margin-top:2em}
+ p{margin:1em 0}
+ </style>
 <body>
 <form method = 'post'>
  {% csrf_token %}
- <h1>恭喜,你丫个{{username}}终于{{operation}}成功了啊！</h1>
+ <h1><center>Goodbye, caregiver {{username}}, see you next time !!</center></h1>
 </form>
-
-<a href="http://localhost:8000/servicelist/">点这个，享受特殊服务吧~~~~ <br> </a>
-<a href="http://localhost:8000/logout/">退出 <br> </a>
-<a href="http://localhost:8000/checkcode/">来看一张羞羞的图片吧</a>
+<a href="http://localhost:8000/login/"><center>Log in<br></center> </a>
 </body>
 </html>

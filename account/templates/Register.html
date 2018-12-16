@@ -3,24 +3,38 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
- <title>用户注册</title>
+ <title>User Registration</title>
 </head>
  <style type="text/css">
  body{color:#efd;background:#876;padding:0 5em;margin:0}
  h1{padding:2em 1em;background:#675}
  h2{color:#bf8;border-top:1px dotted #fff;margin-top:2em}
+ h3{color:#bcd;margin-top:1em}
  p{margin:1em 0}
  </style>
 <body>
-<h1>注册页面：</h1>
-<form method = 'post' enctype="multipart/form-data">
+<h1><center>Dear New User, Welcome to our system!!</center></h1>
+<h2>User Must Know</h2>
+<h3>Privacy and Security Policies</h3>
+<form method = 'post' enctype="multipart/form-data" style = "display:inline; float: right">
  {%csrf_token%}
 {{uf.as_p}}
 {{errors}}
 </br>
-<input type="submit" value = "ok" />
+<input type="submit" value = "OK" />
+    <a href="http://localhost:8000/login/">Log in</a>
 </form>
+<!--id="middle"  align="center"-->
+<div><textarea style="resize:none;width:600px;height:200px; horiz-align:center; display:table-cell" rows="10" cols="30" readonly>
+Data about old people will be gathered by sensor deployers. We are not responsible for the sensor and data gathering part.
 
- <a href="http://localhost:8000/login/">登陆</a>
+Data gathered will be directly stored in computers in old people care centers. At the same time, caregivers have some literature record data about the old people. Those kinds of data have personal information about old people, like their names, their daily activity tracing record.
+
+Caregivers can only use these data within old people care centers, and they can only use these data for the purpose of old people’s well being.
+
+These data cannot be revealed to irrelevant people. For example, the data about one old person must not be revealed to other old people or caregivers irrelevant to these data sets.
+
+If caregivers violate the regulations above, they have to take whatever the legal responsibilities.
+</textarea></div>
 </body>
 </html>

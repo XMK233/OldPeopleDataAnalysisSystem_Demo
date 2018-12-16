@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
- <title>用户登陆</title>
+ <title>User log in</title>
 </head>
  <style type="text/css">
  body{color:#efd;background:#987;padding:0 5em;margin:0}
@@ -11,15 +11,16 @@
  h2{color:#bf8;border-top:1px dotted #fff;margin-top:2em}
  p{margin:1em 0}
  </style>
+
 <body>
-<h1>登录页面：</h1>
-<form method = 'post' enctype="multipart/form-data">
+<h1><center>Please log in</center></h1>
+<center><form method = 'post' enctype="multipart/form-data">
  {% csrf_token %}
 {{uf.as_p}}
  <img src="/checkcode/" onclick="ChangeCode(this);">
 <br>
-<input type="submit" value = "ok233" />
-</form>
+<input type="submit" value = "OK" />
+</form></center>
  <script>
      // 点击一次,更改图片内容,
      function ChangeCode(ths){
@@ -27,6 +28,6 @@
          ths.src = ths.src + '?';
      }
  </script>
-<a href="http://localhost:8000/register/">注册</a>
+<center><a href="http://localhost:8000/register/">Register</a></center>
 </body>
 </html>

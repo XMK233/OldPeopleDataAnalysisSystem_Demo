@@ -18,15 +18,15 @@ from django.contrib import admin
 from account import views as av
 
 urlpatterns = [
-    url(r'^$', av.hello),
     url(r'^login/$',av.login, name = 'login'),
     url(r'^register/$',av.register, name = 'register'),
     url(r'^logout/$',av.logout, name = 'logout'),
     url(r'^checkcode/$',av.check_code, name = 'checkcode'),
-    url(r'^admin/', admin.site.urls),
     url(r'^servicelist/$', av.goToServicePage, name="servicelist"),
-    url(r'^sleepcondition/$', av.testPosting, name="sleepcondition"),
-    #url(r'^testPosting/$', av.testPosting, name="tp"),
+    url(r'^sleepcondition/$', av.upload, name="sleepcondition"),
+
+    url(r'^admin/', admin.site.urls),
+    url(r'^upload/$',av.upload,name='upload'),
 
 
 ]
