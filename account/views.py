@@ -113,7 +113,7 @@ def register(request):
 def logout(request):
     nm = request.COOKIES.get('username')
     response = render_to_response('SuccessLogout.html',
-                                  {'username': nm},
+                                  #{'username': nm},
                                   context_instance=RequestContext(request))
     #清理cookie里保存username
     response.delete_cookie('username')
@@ -144,7 +144,7 @@ def upload(request):
         test_data = {
             "instances": data
         }
-        url = "http://192.168.216.3:8501/v1/models/mnist_model:predict"
+        url = "http://scale05.eecs.yorku.ca:8501/v1/models/mnist_model:predict"
         r = requests.post(url, json=test_data)
 
         response = render_to_response('ResultDisplay.html',
